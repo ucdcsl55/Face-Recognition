@@ -10,7 +10,7 @@ This dataset is more complex than the number datasets (like MNIST or SVHN) you'v
 1.0.2 Pre-processed Data Since the project's main focus is on building the GANs, we've done some of the pre-processing for you. Each of the CelebA images has been cropped to remove parts of the image that don't include a face, then resized down to 64x64x3 NumPy images. Some sample data is show below.
 
 
-## Learnings
+## Learnings throughout the model development process:
 
 1. Generator conv_dim vs. Discriminator conv_dim. At one stage, I was using a similar conv dimension to both my generator and discriminator networks. Unfortunately, the result did not turn out well. Fake images look blurry, unreal and some are scary too. The discriminator's doing fine but don't seem to see any further improvement in the generator network as epoch increases. As a result of that, I have started to tweak my dimensions in this manner. g_conv_dim > d_conv_dim.
 
