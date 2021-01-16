@@ -44,3 +44,5 @@ The project will be broken down into a series of tasks from loading in data to d
   - **Minibatch discrimination** When mode collapses, all images created looks similar. To mitigate the problem, we feed real images and generated images into the discriminator separately in different batches and compute the similarity of the image x with images in the same batch.
     **Source:** [Ways_to_improve_GAN_Performance](https://towardsdatascience.com/gan-ways-to-improve-gan-performance-acf37f9f59b#:~:text=%20GAN%20%E2%80%94%20Ways%20to%20improve%20GAN%20performance,t%20models.%205%20Further%20readings.%20%20More)
 
+
+More readings...[Clickhere](https://medium.com/@utk.is.here/keep-calm-and-train-a-gan-pitfalls-and-tips-on-training-generative-adversarial-networks-edd529764aa9)
