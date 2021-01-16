@@ -20,10 +20,7 @@ The project will be broken down into a series of tasks from loading in data to d
 
 7. Self Attention GAN (SAGAN). It is shown that spectral normalization, a particular kind of normalization applied on the convolutional kernels, can greatly help the stability of the training, especially overcoming vanishing gradient. Accordingly, it was first used only in the discriminator, but later it showed to be effective if also used in the convolutional layers of the generator. So, in my model, I do see vanishing gradient issue after 2-3 rounds of attempts. Hence I have applied this for both networks.
 
-[!Round1](https://github.com/ucdcsl55/Generate-Faces/blob/main/images/Round1.jpg?raw=true)
-[!Round2](https://github.com/ucdcsl55/Generate-Faces/blob/main/images/Round2.jpg?raw=true)
-[!Round3](https://github.com/ucdcsl55/Generate-Faces/blob/main/images/Round3.jpg?raw=true)
-[!FinalRounds](https://github.com/ucdcsl55/Generate-Faces/blob/main/images/Final_Rounds.jpg?raw=true)
+[!Last Attempt](https://github.com/ucdcsl55/Generate-Faces/blob/main/images/LastAttempt.jpg?raw=true)
 
 
 ### Suggestion to improve GAN model:
