@@ -48,5 +48,5 @@ This dataset is more complex than the number datasets (like MNIST or SVHN) you'v
   - **ResidualBlock** to overcome vanishing gradient issue, if applicable.
   - **Feature Matching**. The “best” image keeps changing when both networks counteract their opponent. This will continue going on and on where both models do not even converge at the end. This is what we called mode collapse. Perhaps feature matching can address that issue.
   - **Minibatch discrimination** When mode collapses, all images created looks similar. To mitigate the problem, we feed real images and generated images into the discriminator separately in different batches and compute the similarity of the image x with images in the same batch.
-    **Source:** [!Ways_to_improve_GAN_Performance](https://towardsdatascience.com/gan-ways-to-improve-gan-performance-acf37f9f59b#:~:text=%20GAN%20%E2%80%94%20Ways%20to%20improve%20GAN%20performance,t%20models.%205%20Further%20readings.%20%20More)
+    **Source:** [Ways_to_improve_GAN_Performance](https://towardsdatascience.com/gan-ways-to-improve-gan-performance-acf37f9f59b#:~:text=%20GAN%20%E2%80%94%20Ways%20to%20improve%20GAN%20performance,t%20models.%205%20Further%20readings.%20%20More)
 
