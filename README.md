@@ -4,6 +4,18 @@ This project is to define and train a DCGAN on a dataset of faces. THe goal is t
 
 The project will be broken down into a series of tasks from loading in data to defining and training adversarial networks. At the end of the notebook, I should be able to visualize the results of your trained Generator to see how it performs; generated samples should look like fairly realistic faces with small amounts of noise.
 
+### Background
+I am implementing DCGAN here to be specific. Which is called **Deep Convolution Generative Adversarial Networks**. This is a variation of the standard GAN which was introduced in 2014 by @ Ian Goodfellow. 
+
+The concept behind GAN is that it has two networks called Generator and Disriminator. 
+- Generator is to generate fake images from latent vector (or we called noise) so that it can fool the discriminator. 
+- Discriminator is to detect if the image is real or fake. 
+
+Discriminator, usually, gets better in discriminating real and fake images. But, on the other hand, Generator takes some time in generating fake images that look real. 
+Unfortunately, the task to train GAN is not very easy. The architecture of the networks and choice of hyperparameters is quite similar as used in the DCGAN paper. 
+
+******************************************************************************************************************************************
+
 ### Learnings throughout the model development process:
 
 1. Generator conv_dim vs. Discriminator conv_dim. At one stage, I was using a similar conv dimension to both my generator and discriminator networks. Unfortunately, the result did not turn out well. Fake images look blurry, unreal and some are scary too. The discriminator's doing fine but don't seem to see any further improvement in the generator network as epoch increases. As a result of that, I have started to tweak my dimensions in this manner. g_conv_dim > d_conv_dim.
@@ -23,6 +35,7 @@ The project will be broken down into a series of tasks from loading in data to d
 [!LastAttempt](https://github.com/ucdcsl55/Generate-Faces/blob/main/images/LastRound.png?raw=true)
 
 
+******************************************************************************************************************************************
 ### Suggestion to improve GAN model:
 
 1. Sort "celebrity" faces by race or by ethnicity and batch up separately for training purpose. The concept is similar to sorting cat and dog images from a household pets dataset. This way, the model can learn the precise features faster and better;
