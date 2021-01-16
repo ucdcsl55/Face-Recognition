@@ -37,16 +37,16 @@ This dataset is more complex than the number datasets (like MNIST or SVHN) you'v
 
 4. From model optimisation strategy perspective,
 - **Approaches that I applied and added into my network(s) as part of learnings:**
-  - Added self-attention layers. I used spectral normalisation. This has created some stability in my networks.
-  - Added labels smoothing so that I can discourage discriminator network to be overconfident. Alternatively, we can use a one-sided label smoothing.
-  - Added flipped labels to real and fake loss functions. Yes, I did even try setting real loss = 0 and fake loss = 1. Sounds silly.....but the underlying reason is because I do noticed as the epoch increases, my discriminator loss was converging to zero but the generator started to diverge. So, I wanted to improve my generator network and tested by flipping the labels.
-  - Applied two different learning rates for different network. Attracted by the concept after reading some research papers on Two Time-Scale Update Rule (TTUR).
-  - Avoid stopping the iteration process early as networks need time to learn and improve. I kept most of my learning results at least epochs=20.
+  - Added **self-attention** layers. I used spectral normalisation. This has created some stability in my networks.
+  - Added **labels smoothing** so that I can discourage discriminator network to be overconfident. Alternatively, we can use a one-sided label smoothing.
+  - Added **flipped labels** to real and fake loss functions. Yes, I did even try setting real loss = 0 and fake loss = 1. Sounds silly.....but the underlying reason is because I do noticed as the epoch increases, my discriminator loss was converging to zero but the generator started to diverge. So, I wanted to improve my generator network and tested by flipping the labels.
+  - Applied two different learning rates for different network. Attracted by the concept after reading some research papers on **Two Time-Scale Update Rule (TTUR)**.
+  - **Avoid stopping the iteration process early** as networks need time to learn and improve. I kept most of my learning results at least epochs=20.
 
 - **Approaches I came across via researches and it's worth knowing or exploring if time permits:**
-  - Add more convolutional layers and another fully-connected layer in the generator network or using larger kernel size might improve the result slightly.
-  - ResidualBlock to overcome vanishing gradient issue, if applicable.
-  - Feature Matching. The “best” image keeps changing when both networks counteract their opponent. This will continue going on and on where both models do not even converge at the end. This is what we called mode collapse. Perhaps feature matching can address that issue.
-  - Minibatch discrimination When mode collapses, all images created looks similar. To mitigate the problem, we feed real images and generated images into the discriminator separately in different batches and compute the similarity of the image x with images in the same batch.
-    Source: Ways_to_improve_GAN_Performance
+  - Add **more convolutional layers and another fully-connected layer** in the generator network or using **larger kernel size** might improve the result slightly.
+  - **ResidualBlock** to overcome vanishing gradient issue, if applicable.
+  - **Feature Matching**. The “best” image keeps changing when both networks counteract their opponent. This will continue going on and on where both models do not even converge at the end. This is what we called mode collapse. Perhaps feature matching can address that issue.
+  - **Minibatch discrimination** When mode collapses, all images created looks similar. To mitigate the problem, we feed real images and generated images into the discriminator separately in different batches and compute the similarity of the image x with images in the same batch.
+    **Source:** [!Ways_to_improve_GAN_Performance](https://towardsdatascience.com/gan-ways-to-improve-gan-performance-acf37f9f59b#:~:text=%20GAN%20%E2%80%94%20Ways%20to%20improve%20GAN%20performance,t%20models.%205%20Further%20readings.%20%20More)
 
