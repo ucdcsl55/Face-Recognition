@@ -1,16 +1,10 @@
 # Face-Recognition
 
-In this project, you'll define and train a DCGAN on a dataset of faces. Your goal is to get a generator network to generate new images of faces that look as realistic as possible!
+This project is to define and train a DCGAN on a dataset of faces. THe goal is to get a generator network to generate new images of faces that look as realistic as possible!
 
-The project will be broken down into a series of tasks from loading in data to defining and training adversarial networks. At the end of the notebook, you'll be able to visualize the results of your trained Generator to see how it performs; your generated samples should look like fairly realistic faces with small amounts of noise.
+The project will be broken down into a series of tasks from loading in data to defining and training adversarial networks. At the end of the notebook, I should be able to visualize the results of your trained Generator to see how it performs; generated samples should look like fairly realistic faces with small amounts of noise.
 
-1.0.1 Get the Data You'll be using the CelebFaces Attributes Dataset (CelebA) to train your adversarial networks.
-This dataset is more complex than the number datasets (like MNIST or SVHN) you've been working with, and so, you should prepare to define deeper networks and train them for a longer time to get good results. It is suggested that you utilize a GPU for training.
-
-1.0.2 Pre-processed Data Since the project's main focus is on building the GANs, we've done some of the pre-processing for you. Each of the CelebA images has been cropped to remove parts of the image that don't include a face, then resized down to 64x64x3 NumPy images. Some sample data is show below.
-
-
-## Learnings throughout the model development process:
+### Learnings throughout the model development process:
 
 1. Generator conv_dim vs. Discriminator conv_dim. At one stage, I was using a similar conv dimension to both my generator and discriminator networks. Unfortunately, the result did not turn out well. Fake images look blurry, unreal and some are scary too. The discriminator's doing fine but don't seem to see any further improvement in the generator network as epoch increases. As a result of that, I have started to tweak my dimensions in this manner. g_conv_dim > d_conv_dim.
 
@@ -27,7 +21,7 @@ This dataset is more complex than the number datasets (like MNIST or SVHN) you'v
 7. Self Attention GAN (SAGAN). It is shown that spectral normalization, a particular kind of normalization applied on the convolutional kernels, can greatly help the stability of the training, especially overcoming vanishing gradient. Accordingly, it was first used only in the discriminator, but later it showed to be effective if also used in the convolutional layers of the generator. So, in my model, I do see vanishing gradient issue after 2-3 rounds of attempts. Hence I have applied this for both networks.
 
 
-## Suggestion to improve GAN model:
+### Suggestion to improve GAN model:
 
 1. Sort "celebrity" faces by race or by ethnicity and batch up separately for training purpose. The concept is similar to sorting cat and dog images from a household pets dataset. This way, the model can learn the precise features faster and better;
 
